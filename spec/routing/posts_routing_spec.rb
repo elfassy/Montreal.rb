@@ -1,34 +1,34 @@
 require "spec_helper"
 
-describe PostsController do
+describe Admin::PostsController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/posts").should route_to("posts#index")
+      get("/admin/posts").should route_to("admin/posts#index")
     end
 
     it "routes to #new" do
-      get("/posts/new").should route_to("posts#new")
+      get("/admin/posts/new").should route_to("admin/posts#new")
     end
 
     it "routes to #show" do
-      get("/posts/1").should route_to("posts#show", :id => "1")
+      get("/admin/posts/1").should route_to("admin/posts#show", :id => "1")
     end
 
     it "routes to #edit" do
-      get("/posts/1/edit").should route_to("posts#edit", :id => "1")
+      get("/admin/posts/1/edit").should route_to("admin/posts#edit", :id => "1")
     end
 
     it "routes to #create" do
-      post("/posts").should route_to("posts#create")
+      post("/admin/posts").should route_to("admin/posts#create")
     end
 
     it "routes to #update" do
-      put("/posts/1").should route_to("posts#update", :id => "1")
+      put("/admin/posts/1").should route_to("admin/posts#update", :id => "1")
     end
 
     it "routes to #destroy" do
-      delete("/posts/1").should route_to("posts#destroy", :id => "1")
+      delete("/admin/posts/1").should route_to("admin/posts#destroy", :id => "1")
     end
 
   end

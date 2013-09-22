@@ -1,9 +1,11 @@
 MontrealRb::Application.routes.draw do
-  resources :posts, except: :index
+  namespace :admin do
+    resources :posts
+  end
 
   devise_for :users
 
-  root to: "posts#index"
+  root to: "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -44,7 +46,7 @@ MontrealRb::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

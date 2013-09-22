@@ -18,7 +18,7 @@ require 'spec_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
-describe PostsController do
+describe Admin::PostsController do
 
   # This should return the minimal set of attributes required to create a valid
   # Post. As you add validations to Post, be sure to
@@ -82,7 +82,7 @@ describe PostsController do
 
       it "redirects to the created post" do
         post :create, {:post => valid_attributes}, valid_session
-        response.should redirect_to(Post.last)
+        response.should redirect_to(admin_post_path(Post.last))
       end
     end
 
@@ -124,7 +124,7 @@ describe PostsController do
       it "redirects to the post" do
         post = Post.create! valid_attributes
         put :update, {:id => post.to_param, :post => valid_attributes}, valid_session
-        response.should redirect_to(post)
+        response.should redirect_to(admin_post_path(post))
       end
     end
 
@@ -158,7 +158,7 @@ describe PostsController do
     it "redirects to the posts list" do
       post = Post.create! valid_attributes
       delete :destroy, {:id => post.to_param}, valid_session
-      response.should redirect_to(posts_url)
+      response.should redirect_to(admin_posts_url)
     end
   end
 
