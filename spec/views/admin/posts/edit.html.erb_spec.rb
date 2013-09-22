@@ -18,7 +18,6 @@ describe "admin/posts/edit" do
       assert_select "input#post_title[name=?]", "post[title]"
       assert_select "textarea#post_content[name=?]", "post[content]"
       assert_select "input#post_tags[name=?]", "post[tags]"
-      assert_select "input#post_user_id[name=?]", "post[user_id]"
     end
   end
 end

@@ -20,6 +20,9 @@ require 'spec_helper'
 
 describe Admin::PostsController do
 
+  before :each do
+    controller.class.skip_before_filter :authenticate_user!
+  end
   # This should return the minimal set of attributes required to create a valid
   # Post. As you add validations to Post, be sure to
   # adjust the attributes here as well.

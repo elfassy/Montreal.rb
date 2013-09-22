@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require plugins/epiceditor
 //= require turbolinks
 //= require_tree .
