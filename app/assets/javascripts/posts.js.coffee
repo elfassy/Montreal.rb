@@ -3,4 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery ->
-  editor = new EpicEditor({basePath: '/EpicEditor-v0.2.2'}).load()
+  if $("#epiceditor").length
+    editor = new EpicEditor({basePath: '/EpicEditor-v0.2.2'}).load()
