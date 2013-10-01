@@ -1,9 +1,19 @@
-<% @posts.each do |post| %>
+<div class="call_to_action">
   <div class="row">
-    <h2><%= post.title %></h2>
-    <small class="text-muted"><%= post.created_at.strftime "%d/%-m/%Y" %></small>
-    <div class="content">
-      <%= post.content %>
-    </div>
+    <h1>The Montreal Ruby Community</h1>
+    <p>Would you like to join the mailing list</p>
+    <%= link_to "JOIN", "#", id: "mailing_list_button" %>
   </div>
-<% end %>
+</div>
+
+<div class="container">
+  <% @posts.each do |post| %>
+    <div class="row">
+      <h2><%= post.title %></h2>
+      <small class="text-muted"><%= post.created_at.strftime "%d/%-m/%Y" %></small>
+      <div class="content">
+        <%= post.content %>
+      </div>
+    </div>
+  <% end %>
+</div>
