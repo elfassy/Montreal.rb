@@ -15,4 +15,3 @@
 //= require plugins/bootstrap.min
 //= require plugins/epiceditor
 //= require turbolinks
-//= require_tree .

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>montreal.rb | Admin</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
+    <%= javascript_include_tag "admin", "data-turbolinks-track" => false %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Montreal.rb</h1>
+        <p>Montreal's Ruby Community</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <%= yield %>
+        </div>
+        <div class="col-md-2">
+          sidebar
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,7 +1,3 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
-
 jQuery ->
-  if $("#epiceditor").length
-    editor = new EpicEditor({basePath: '/EpicEditor-v0.2.2'}).load()
+  if $("#epiceditor").length > 0
+    editor = new EpicEditor({basePath: '/EpicEditor-v0.2.2', textarea: "post_content"}).load()
