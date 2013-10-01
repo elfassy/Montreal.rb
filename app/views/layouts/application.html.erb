@@ -7,12 +7,20 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="jumbotron">
+    <header id="main-header">
       <div class="container">
-        <h1>Montreal.rb</h1>
-        <p>Montreal's Ruby Community</p>
+        <div class="row">
+          <%= link_to "montreal.rb", "/", id: "logo" %>
+          <nav>
+            <ul>
+              <li><%= link_to "About", "#" %></li>
+              <li><%= link_to "Jobs", "#" %></li>
+              <li><%= link_to "Members", "#" %></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
+    </header>
 
     <div class="container">
       <div class="row">
