@@ -11,5 +11,8 @@
  *= require_self
  *= require plugins/bootstrap.min
  *= require plugins/bootstrap-theme.min
- *= require_tree .
+ *= require base
+ *= require header
+ *= require home
+ *= require posts
  */
